@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+
+.poscentralized{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+td,th{
+  width: 150px;
+  height: auto;
+}
+.boxconteudo{
+  float: left;
+  width: 150px;
+}
+
+
