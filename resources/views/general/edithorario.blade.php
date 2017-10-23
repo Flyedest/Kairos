@@ -18,7 +18,7 @@ Editar
   <div class="form-group">
     <label for="titulo">Titulo</label>
 
-    <input  id="titulo" name="Titulo" type="text" class="form-control" placeholder="Titulo">
+    <input  id="titulo" name="Titulo" type="text" class="form-control" placeholder="Titulo" value="{{ $editar->Titulo }}">
   </div>
         <div class="form-group">
     <label for="professor">Professor</label>
@@ -34,3 +34,4 @@ Editar
   </div>
     </form>
 </div>
+@stop

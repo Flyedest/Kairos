@@ -48,6 +48,7 @@ Horario
         @endforeach
 
 </table>
+    
 <table class="TableColumns">
         <tr>
         <th><div class="poscentralized bordered">Segunda</div></th>

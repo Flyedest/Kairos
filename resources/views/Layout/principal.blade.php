@@ -13,6 +13,11 @@
     <link href="/css/bootstrap.css" type="text/css" rel="stylesheet" />
     <link href="/css/fontawesome.min.css" type="text/css" rel="stylesheet" />
 
+    <!-- <stylesheet do menu> -->
+    <link rel="stylesheet" type="text/css" href="/css/menu-scroll.css">
+    <script type="text/javascript" src="/js/menu-scroll.js"></script>
+    <!-- </stylesheet do menu> -->
+
     <script type="text/javascript">
         function MenuCadastro() {
             location.href = "/horario/novo";
@@ -24,7 +29,7 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-default navbar-static-top menu-scroll"><!-- classe adicionada "menu-scroll" -->
             <div class="container">
                 <div class="navbar-header">
 
@@ -38,19 +43,19 @@
 
                     <!-- Branding Image -->
                     @if(Auth::guest())
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand navbar-brand-scroll" href="{{ url('/') }}">
                         Kairos<small><small><small><small>Beta version</small></small></small></small>
                     </a>
                     @else
-                    <a class="navbar-brand" href="{{ url('/menu') }}">
+                    <a class="navbar-brand navbar-brand-scroll" href="{{ url('/menu') }}">
                         Kairos<small><small><small><small>Beta version</small></small></small></small>
                     </a>
                     @endif
                 </div>
-
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
+            <!--<div class="container-fluid">-->
+                <div class="collapse navbar-collapse div-drop" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav navbar-none">
                         &nbsp;
                     </ul>
 
@@ -83,9 +88,17 @@
                         @endif
                     </ul>
                 </div>
+            <!--</div>-->
             </div>
         </nav>
 
+        <!-- div extra transparente para compensar o "position: fixed;" do nav-->
+        <div class="container-fluid filler">
+            <div class="row">
+                <div class="col-md-12">
+                </div>
+            </div>
+        </div>
         @yield('content')
     </div>
 </body>

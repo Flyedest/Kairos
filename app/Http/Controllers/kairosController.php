@@ -21,7 +21,12 @@ class kairosController extends Controller
 
     public function horario(){
       $horarios = Horarios::all();
-      $horas = Horas::all();
+      $horas = DB::table(DB::raw('horas'))
+          ->select('horainicio','horafim')
+          ->orderBy('horainicio')
+          ->get();
+        
+
       return view::make('general.horario', compact('horarios','horas'));
     }
     
@@ -48,6 +53,7 @@ class kairosController extends Controller
     public function addhora(){
         $horainicio = Request::input('horainicio');
         $horafim = Request::input('horafim');
+        
         DB::insert('insert into horas (horainicio,horafim) values (?,?)',array($horainicio,$horafim));
         return redirect()
             ->action('kairosController@horario');
@@ -55,83 +61,22 @@ class kairosController extends Controller
     public function editarhorario($id){
       
         
-        
-//        $editar = Horarios::find($id);
-//        $editare = $editar[IdHorario];
-//        
-//        return view::make('general.edithorario', compact ('editare'));//Passando a variavel com seu valor para a view edithorario.blade.php
-        
-        
-//        $NovoHorario = Horarios::find($id);
-//       global $global = $NovoHorario;
-//        
-//        //não tá passando daqui
-//		return view ('general.edithorario');
-////            ->withHorarios($NovoHorario);
         $editar = Horarios::find($id);
          return view::make('general.editHorario',compact('editar'));
                 
   }
     
     public function atualizarhorario(){
-        $editar = new Horarios;
         $id = Request::input('IdHorario');
-        $editar ->IdHorario = Horarios::find($id);
+        $editar = Horarios::find($id);
         $editar ->Titulo = Request::input('Titulo') ;
         $editar ->Professor = Request::input('Professor');
         $editar ->sala = Request::input('Sala');
         $editar ->save();
         
-    
+        return  redirect()
+            ->action('kairosController@horario');
 
-        
-        //Abaixo quaaaase deu certo
-//        $Titulo = Request::input('Titulo');
-//        $Professor = Request::input('Professor');
-//        $sala = Request::input('Sala');
-//        $Dia = Request::input('Dia');
-//        $idusuario = 1;
-//        DB::update('update horario set Titulo = ? , Professor = ? , sala = ? , Dia = ? where IdHorario = ?', array($Titulo , $Professor , $sala, $Dia , $id));
-        
-        
-        // tentativa 13
-//         DB::table('horario')
-//            ->where('IdHorario', $id)
-//            ->update([
-//                'Titulo' => $Titulo,
-//                'Professor' => $Professor,
-//                'sala' => $sala
-//            ]);
-//       //Tentativa 15
-//        $editare ->IdHorario = Request::input('IdHorario');
-//        $editare ->Titulo = Request::input('Titulo') ;
-//        $editare ->Professor = Request::input('Professor');
-//        $editare ->sala = Request::input('Sala');
-//        $editare->save();
-//        
-//  
-//      
-//        //Tentativa 08
-////        $IdHorario = Request::input('IdHorario')->get();
-//		$Titulo= Request::input('Titulo');
-//		$Professor  = Request::input('Professor');
-//		$sala      = Request::input('Sala');
-//        $id         = global $global;
-//        dd($id);
-//		
-//        //Tentativa 18
-//        DB::table('horario')
-//            ->where('IdHorario', $id)
-//            ->update([
-//                'Titulo' => $Titulo,
-//                'Professor' => $Professor,
-//                'sala' => $sala
-//            ]);
-//        return redirect() 
-//            ->action('kairosController@horario');
-        
-        
-//        ESSA BUDEGA AI DE CIMA TA BUGADO e eu to ficando puto
     }
     public function remove($id){
         $horarios = Horarios::find($id);

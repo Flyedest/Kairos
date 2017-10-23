@@ -65,5 +65,11 @@
             </div>
         </div>
     </div>
+    <!-- div para testes com uma classe para testes-->
+    <div class="row">
+        <div class="col-md-12 filler-login">
+            <p class="teste"></p>
+        </div>
+    </div>
 </div>
 @endsection

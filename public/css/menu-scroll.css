@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+.menu-scroll{
+	height: 85px;
+	position: fixed;
+	width: 100%;
+	margin: 0;
+	padding: 18px 0;
+	-webkit-transition: height 200ms cubic-bezier(0.15,0.04,0.03,0.94);
+	-moz-transition: height 200ms cubic-bezier(0.15,0.04,0.03,0.94);
+	transition: all 200ms cubic-bezier(0.15,0.04,0.03,0.94);
+	overflow: hidden;
+}
+
+.navbar-brand-scroll{
+	font-size: 3.5em;
+	line-height: .5;
+	transition: font-size 200ms;
+}
+.filler{
+	height: 200px;
+	background-color: transparent;
+	transition: height 300ms;
+}
+.filler-login{
+	height: 2000px;
+	background-color: transparent;
+}
