@@ -1,6 +1,6 @@
 @extends('Layout.principal')
 
-@section('conteudo')
+@section('content')
 
 <div class="title title" align="center" style="font-size:48pt;">Kairos</div>
 <br>
@@ -11,8 +11,12 @@
 </div>
 </div>
 <div class="poscentralized">
-  <button class="btn btn-default"><a href="/Registro">Registre-se já!</a></button>
+  <button class="btn btn-default"><a href="/register">Registre-se já!</a></button>
 @endsection
+    @section('Back')
+    <a href="/menu">Menu</a>
+    @endsection
 @section('title')
 Bem vindo!
+    
 @stop

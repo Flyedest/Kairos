@@ -1,7 +1,7 @@
 @extends('Layout.principal')
 
 @section('title')
-Novo Horário
+Editar
 
 @endsection
 
@@ -10,9 +10,11 @@ Novo Horário
 <br/>
 <div class="poscentralized">
 
-    <form action="/horario/add" method="post">
-        
+    <form action="/horario/atualizar" method="post">
+      
+    <input type="hidden" value="{{$editar -> IdHorario}}" name="IdHorario"/>
     <input type="hidden" name="_token" value="{{{csrf_token()}}}"/>
+        
   <div class="form-group">
     <label for="titulo">Titulo</label>
 
@@ -27,23 +29,8 @@ Novo Horário
     <label for="sala">Sala</label>
 
     <input  id="sala" type="text" name="Sala" class="form-control" placeholder="Sala">
+            <br/>
+            <input  class="btn btn-success btn-block"type="submit" value="Editar"/>
   </div>
-        <div class="form-group">
-    <label for="dia">Dia</label>
-    <select class="form-control" name="Dia" id="dia">
-      <option>Segunda</option>
-      <option>Terça</option>
-      <option>Quarta</option>
-      <option>Quinta</option>
-      <option>Sexta</option>
-      <option>Sábado</option>
-      <option>Domingo</option>
-    </select>
-  </div>
-  
-        <input type="submit"/>
-        
-        
-</form>
+    </form>
 </div>
-@stop

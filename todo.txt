@@ -1,0 +1,9 @@
++ Agenda
++ Criar tabela  horario separada para horario.
++ Configurar para meses - Agenda
+- Ativar botão editar
++ passar variável pela rota
++ Agregar no formulário
++ Passar para o controller
+- Fazer o Update
+

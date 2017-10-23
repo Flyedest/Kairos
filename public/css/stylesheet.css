@@ -1,5 +1,18 @@
 @charset "UTF-8";
 
+body::-webkit-scrollbar-track {
+    background-color: #dad7d7;
+}
+body::-webkit-scrollbar {
+    width: 6px;
+    background: #F4F4F4;
+}
+body::-webkit-scrollbar-thumb {
+    background: chartreuse;
+}
+
+
+
 
 .poscentralized{
   display: -webkit-flex;
@@ -17,5 +30,42 @@ td,th{
   float: left;
   width: 150px;
 }
+.major{font-size: 3em;}
 
+/*New test*/
+
+.TableColumns{
+display: -webkit-flex;
+  display: inline-grid;
+  float: left;
+
+}
+.bordered{
+  border-bottom-width: 2px;
+  border-color:#999;
+  border-bottom-style:solid;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+
+.ButtonNew{
+  cursor: pointer;
+  border-radius: 100%;
+  padding: 30px;
+  background-color: red;
+  color: white;
+  position: relative;
+  width: 20px;
+  height: 20px;
+
+  top:75%;
+  left: 80%;
+
+  -webkit-box-shadow: inset 0px 0px 31px -6px rgba(0,0,0,0.75);
+-moz-box-shadow: inset 0px 0px 31px -6px rgba(0,0,0,0.75);
+box-shadow: inset 0px 0px 31px -6px rgba(0,0,0,0.75);
+}
+.forma{
+    min-width: 50px;
+}
 
