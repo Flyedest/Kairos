@@ -10,16 +10,30 @@ use App\Horas;
 use Request;
 use View;
 use Input;
-
+use App\User;
 
 class kairosController extends Controller
 {
+    
+    private $usuario;
+    
+    public function __construct(){
+        $this->middleware('auth');
+        $this->middleware(function($request,$next){
+            $this->usuario = auth()->user();
+            
+            return $next($request);
+        });
+    }
     
     public function index(){
         return view('general.index');
     }
 
     public function horario(){
+        
+        $user = User::where('user_id',$this->usuario->id)->get();
+        
       $horarios = Horarios::all();
       $horas = DB::table(DB::raw('horas'))
           ->select('horainicio','horafim')
