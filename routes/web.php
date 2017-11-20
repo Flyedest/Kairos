@@ -13,21 +13,31 @@
 
 Route::get('/','kairosController@index');
 Route::get('/menu','kairosController@menu');
+Route::prefix('/horario')->group(function(){
+  
+    Route::get('/','HorarioController@horario');
+    Route::get('/novo','HorarioController@novoHorario');
+    Route::post('/add','HorarioController@addhorario');
+    Route::get('/remover/{id}','HorarioController@remove');
+    Route::get('/novo/hora','HorarioController@novahora');
+    Route::post('/add/hora','HorarioController@addhora');
+    Route::get('/remover/hora/{id}','HorarioController@removeHora');
+    Route::get('/editar/hora/{id}','HorarioController@editaHora');
+    Route::post('/atualizar','HorarioController@atualizarhorario');
+    Route::post('/atualizar/hora','HorarioController@atualizarhora');
+    Route::get('/editar/{id}','HorarioController@editarhorario');
+});
 
-Route::get('/horario','kairosController@horario');
-Route::get('/horario/novo','kairosController@novoHorario');
-Route::post('/horario/add','kairosController@addhorario');
-Route::get('/horario/remover/{id}','kairosController@remove');
-Route::get('/horario/novo/hora','kairosController@novahora');
-Route::post('/horario/add/hora','kairosController@addhora');
-Route::post('/horario/atualizar','kairosController@atualizarhorario');
-Route::get('/horario/editar/{id}','kairosController@editarhorario');
+Route::prefix('/agenda')->group(function(){
+    
+    Route::get('/','AgendaController@agenda');
+    Route::post('/add','AgendaController@addagenda');
+    Route::get('/novo','AgendaController@novaagenda');
+    Route::get('/remover/{id}','AgendaController@removeagenda');
+    Route::get('/agenda/{id}','AgendaController@editarAgenda');
+    Route::post('/atualizar/agenda','AgendaController@atualizarAgenda');
 
-Route::get('/agenda','kairosController@agenda');
-Route::post('/agenda/add','kairosController@addagenda');
-Route::get('/agenda/novo','kairosController@novaagenda');
-Route::get('/agenda/remover/{id}','kairosController@removeagenda');
-
+});
 Auth::routes();
 
 Route::get('/home','HomeController@index')->name('home');

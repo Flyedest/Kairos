@@ -12,13 +12,13 @@ Editar
 
     <form action="/horario/atualizar" method="post">
       
-    <input type="hidden" value="{{$editar -> IdHorario}}" name="IdHorario"/>
+        <input type="hidden" value="{{$editar}}" name="IdHorario"/>
     <input type="hidden" name="_token" value="{{{csrf_token()}}}"/>
         
   <div class="form-group">
     <label for="titulo">Titulo</label>
 
-    <input  id="titulo" name="Titulo" type="text" class="form-control" placeholder="Titulo" value="{{ $editar->Titulo }}">
+    <input  id="titulo" name="Titulo" type="text" class="form-control" placeholder="Titulo">
   </div>
         <div class="form-group">
     <label for="professor">Professor</label>

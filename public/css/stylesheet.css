@@ -1,5 +1,20 @@
 @charset "UTF-8";
 
+@media screen and (max-width: 425px){
+  .background{
+    background-size: cover !important;
+    background-position: bottom right !important;
+  }
+}
+
+.title{
+  color: #fff;
+}
+.background{
+  background: url("/img/fundo2.jpg") fixed no-repeat;
+  
+}
+
 body::-webkit-scrollbar-track {
     background-color: #dad7d7;
 }
@@ -10,10 +25,6 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
     background: chartreuse;
 }
-
-
-
-
 .poscentralized{
   display: -webkit-flex;
   display: flex;
@@ -22,13 +33,15 @@ body::-webkit-scrollbar-thumb {
   -webkit-justify-content: center;
   justify-content: center;
 }
-td,th{
-  width: 150px;
-  height: auto;
+td,th {
+    width: 130px;
 }
 .boxconteudo{
-  float: left;
-  width: 150px;
+/*    Adicionar media depués  */
+    height: 130px;
+    float: left;
+    width: 130px;
+    
 }
 .major{font-size: 3em;}
 
@@ -40,11 +53,12 @@ display: -webkit-flex;
   float: left;
 
 }
+
 .bordered{
   border-bottom-width: 2px;
-  border-color:#999;
+  border-color:#999; 
   border-bottom-style:solid;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   padding-top: 10px;
 }
 
@@ -68,4 +82,8 @@ box-shadow: inset 0px 0px 31px -6px rgba(0,0,0,0.75);
 .forma{
     min-width: 50px;
 }
-
+.notelabel{
+    position: absolute;
+    margin-left: 100px;
+    font-size: 10pt;
+}

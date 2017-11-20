@@ -11,8 +11,10 @@
         <div class="forma"style="width:600px;">
 
         <div class="panel-group" id="accordion">
+           
   <div class="panel panel-default">
-    <div class="panel-heading">
+           
+    <div class="panel-heading ">
       <h4 class="panel-title">
         <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
         Janeiro</a>
@@ -35,7 +37,10 @@
                     <td>{{$e ->Descricao}}</td>
                     <td>{{$e ->DataInicio}}</td>
                     <td>{{$e ->DataFim}}</td>
-                <td><a href="/agenda/remover/{{ $e->IdEventos }}">Remover</a></td>
+                <td><a href="/agenda/remover/{{ $e->IdEventos }}">Remover</a>
+                 <a href = "/agenda/editar/{{$e->IdEventos}}">Editar</a>
+                </td>
+                
             </tr>
             @endif
         @endforeach
@@ -70,7 +75,8 @@
                     <td>{{$e ->Descricao}}</td>
                     <td>{{$e ->DataInicio}}</td>
                     <td>{{$e ->DataFim}}</td>
-                <td><a href="/agenda/remover/{{ $e->IdEventos }}">Remover</a></td>
+                <td><a href="/agenda/remover/{{ $e->IdEventos }}">Remover</a>
+                <a href = "/agenda/editar/{{$e->IdEventos}}">Editar</a></td>
             </tr>
             @endif
         @endforeach
@@ -106,7 +112,8 @@
                     <td>{{$e ->Descricao}}</td>
                     <td>{{$e ->DataInicio}}</td>
                     <td>{{$e ->DataFim}}</td>
-                <td><a href="/agenda/remover/{{ $e->IdEventos }}">Remover</a></td>
+                <td><a href="/agenda/remover/{{ $e->IdEventos }}">Remover</a>
+                <a href = "/agenda/editar/{{$e->IdEventos}}">Editar</a></td>
             </tr>
             @endif
         @endforeach
@@ -141,7 +148,8 @@
                     <td>{{$e ->Descricao}}</td>
                     <td>{{$e ->DataInicio}}</td>
                     <td>{{$e ->DataFim}}</td>
-                <td><a href="/agenda/remover/{{ $e->IdEventos }}">Remover</a></td>
+                <td><a href="/agenda/remover/{{ $e->IdEventos }}">Remover</a>
+                <a href = "/agenda/editar/{{$e->IdEventos}}">Editar</a></td>
             </tr>
             @endif
         @endforeach
@@ -176,7 +184,7 @@
                     <td>{{$e ->Descricao}}</td>
                     <td>{{$e ->DataInicio}}</td>
                     <td>{{$e ->DataFim}}</td>
-                <td><a href="/agenda/remover/{{ $e->IdEventos }}">Remover</a></td>
+                <td><a href="/agenda/remover/{{ $e->IdEventos }}">Remover</a><a href = "/agenda/editar/{{$e->IdEventos}}">Editar</a></td>
             </tr>
             @endif
         @endforeach
@@ -210,7 +218,8 @@
                     <td>{{$e ->Descricao}}</td>
                     <td>{{$e ->DataInicio}}</td>
                     <td>{{$e ->DataFim}}</td>
-                <td><a href="/agenda/remover/{{ $e->IdEventos }}">Remover</a></td>
+                <td><a href="/agenda/remover/{{ $e->IdEventos }}">Remover</a>
+                <a href = "/agenda/editar/{{$e->IdEventos}}">Editar</a></td>
             </tr>
             @endif
         @endforeach
@@ -245,7 +254,8 @@
                     <td>{{$e ->Descricao}}</td>
                     <td>{{$e ->DataInicio}}</td>
                     <td>{{$e ->DataFim}}</td>
-                <td><a href="/agenda/remover/{{ $e->IdEventos }}">Remover</a></td>
+                <td><a href="/agenda/remover/{{ $e->IdEventos }}">Remover</a>
+                <a href = "/agenda/editar/{{$e->IdEventos}}">Editar</a></td>
             </tr>
             @endif
         @endforeach
@@ -280,7 +290,8 @@
                     <td>{{$e ->Descricao}}</td>
                     <td>{{$e ->DataInicio}}</td>
                     <td>{{$e ->DataFim}}</td>
-                <td><a href="/agenda/remover/{{ $e->IdEventos }}">Remover</a></td>
+                <td><a href="/agenda/remover/{{ $e->IdEventos }}">Remover</a>
+                    <a href = "/agenda/editar/{{$e->IdEventos}}">Editar</a></td>
             </tr>
             @endif
         @endforeach
@@ -315,7 +326,8 @@
                     <td>{{$e ->Descricao}}</td>
                     <td>{{$e ->DataInicio}}</td>
                     <td>{{$e ->DataFim}}</td>
-                <td><a href="/agenda/remover/{{ $e->IdEventos }}">Remover</a></td>
+                <td><a href="/agenda/remover/{{ $e->IdEventos }}">Remover</a>
+                <a href = "/agenda/editar/{{$e->IdEventos}}">Editar</a></td>
             </tr>
             @endif
         @endforeach
@@ -350,7 +362,8 @@
                     <td>{{$e ->Descricao}}</td>
                     <td>{{$e ->DataInicio}}</td>
                     <td>{{$e ->DataFim}}</td>
-                <td><a href="/agenda/remover/{{ $e->IdEventos }}">Remover</a></td>
+                <td><a href="/agenda/remover/{{ $e->IdEventos }}">Remover</a>
+                <a href = "/agenda/editar/{{$e->IdEventos}}">Editar</a></td>
             </tr>
             @endif
         @endforeach
@@ -385,7 +398,8 @@
                     <td>{{$e ->Descricao}}</td>
                     <td>{{$e ->DataInicio}}</td>
                     <td>{{$e ->DataFim}}</td>
-                <td><a href="/agenda/remover/{{ $e->IdEventos }}">Remover</a></td>
+                <td><a href="/agenda/remover/{{ $e->IdEventos }}">Remover</a>
+                    <a href = "/agenda/editar/{{$e->IdEventos}}">Editar</a></td>
             </tr>
             @endif
         @endforeach
@@ -421,7 +435,8 @@
                     <td>{{$e ->Descricao}}</td>
                     <td>{{$e ->DataInicio}}</td>
                     <td>{{$e ->DataFim}}</td>
-                <td><a href="/agenda/remover/{{ $e->IdEventos }}">Remover</a></td>
+                <td><a href="/agenda/remover/{{ $e->IdEventos }}">Remover</a>
+                    <a href = "/agenda/editar/{{$e->IdEventos}}">Editar</a></td>
             </tr>
             @endif
         @endforeach

@@ -1,4 +1,4 @@
-@extends('layout.principal')
+@extends('layouts.app')
 @section('meta')
 http-equiv="refresh" content="3;URL=/menu"
 @endsection

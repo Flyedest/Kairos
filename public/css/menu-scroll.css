@@ -1,28 +1,84 @@
 @charset "utf-8";
 
 .menu-scroll{
-	height: 85px;
 	position: fixed;
 	width: 100%;
-	margin: 0;
-	padding: 18px 0;
-	-webkit-transition: height 200ms cubic-bezier(0.15,0.04,0.03,0.94);
-	-moz-transition: height 200ms cubic-bezier(0.15,0.04,0.03,0.94);
-	transition: all 200ms cubic-bezier(0.15,0.04,0.03,0.94);
-	overflow: hidden;
+	-webkit-transition: height 200ms cubic-bezier(0.15,0.04,0.03,0.94), padding 165ms cubic-bezier(0.15,0.04,0.03,0.94);;
+	-moz-transition: height 200ms cubic-bezier(0.15,0.04,0.03,0.94), padding 165ms cubic-bezier(0.15,0.04,0.03,0.94);;
+	transition: all 200ms cubic-bezier(0.15,0.04,0.03,0.94),
+	padding 165ms cubic-bezier(0.15,0.04,0.03,0.94);
 }
-
 .navbar-brand-scroll{
-	font-size: 3.5em;
-	line-height: .5;
 	transition: font-size 200ms;
 }
 .filler{
-	height: 200px;
-	background-color: transparent;
-	transition: height 300ms;
+	background: transparent;
+	transition: height 200ms;
+	z-index: -1;
 }
 .filler-login{
-	height: 2000px;
+	height: 1000px;
 	background-color: transparent;
+}
+.navbar-none{
+	display: none;
+}
+.div-drop{
+	background-color: #fff;
+	overflow-x: hidden;
+	transition: all 200ms;
+}
+
+
+
+@media (min-width: 576px){
+	.navbar-brand-scroll{
+		font-size: 3.5em;
+	}
+	.menu-scroll{
+		height: 85px;
+		padding: 17.5px 0;
+	}
+}
+
+@media (min-width: 768px){
+	.filler{
+		height: 150px;
+	}
+	.div-drop{
+		margin-top: 0;
+	}
+
+}
+
+@media (min-width: 576px) and (max-width: 767px){
+	.filler{
+		height: 100px;
+	}
+	.div-drop{
+		margin-top: 16px;
+	}
+
+}
+
+@media (max-width: 575px){
+	.navbar-brand-scroll{
+		font-size: 1.5em;
+	}
+	.menu-scroll{
+		height: 51px;
+		padding: inherit;
+	}
+	.filler{
+		height: 75px;
+	}
+	.div-drop{
+		margin-top: 0;
+	}
+}
+
+@media (max-width: 767px){
+	.div-drop{
+		margin-right: -100px;
+	}
 }

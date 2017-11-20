@@ -11,9 +11,10 @@
     <link href="/css/stylesheet.css" type="text/css" rel="stylesheet" />
     <link href="/css/app.css" type="text/css" rel="stylesheet" />
     <link href="/css/bootstrap.css" type="text/css" rel="stylesheet" />
-    <link href="/css/fontawesome.min.css" type="text/css" rel="stylesheet" />
+    <link href="/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
 
     <!-- <stylesheet do menu> -->
+    <link rel="stylesheet" type="text/css" href="/css/menu.css">
     <link rel="stylesheet" type="text/css" href="/css/menu-scroll.css">
     <script type="text/javascript" src="/js/menu-scroll.js"></script>
     <!-- </stylesheet do menu> -->
@@ -27,7 +28,7 @@
     <title>Kairos - @yield('title')</title>
 </head>
 
-<body>
+<body class="@yield('body')">
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top menu-scroll"><!-- classe adicionada "menu-scroll" -->
             <div class="container">
@@ -44,11 +45,11 @@
                     <!-- Branding Image -->
                     @if(Auth::guest())
                     <a class="navbar-brand navbar-brand-scroll" href="{{ url('/') }}">
-                        Kairos<small><small><small><small>Beta version</small></small></small></small>
+                        Kairos<small><small><small><small>Versão Beta</small></small></small></small>
                     </a>
                     @else
                     <a class="navbar-brand navbar-brand-scroll" href="{{ url('/menu') }}">
-                        Kairos<small><small><small><small>Beta version</small></small></small></small>
+                        Kairos<small><small><small><small>Versão Beta </small></small></small></small>
                     </a>
                     @endif
                 </div>

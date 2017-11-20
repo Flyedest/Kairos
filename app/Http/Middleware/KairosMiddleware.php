@@ -15,6 +15,11 @@ class KairosMiddleware
      */
     public function handle($request, Closure $next)
     {
+       	if(\Auth::guest())	{
+            return redirect('/login');
+        }
+        
         return $next($request);
+        
     }
 }

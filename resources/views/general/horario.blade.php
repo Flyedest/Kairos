@@ -28,8 +28,8 @@ Horario
     <i class="glyphicon glyphicon-option-vertical dropdown-toggle pull-right" data-toggle="dropdown">
     </i>
     <ul class="dropdown-menu">
-      <li><a href="#">Editar</a></li>
-      <li><a href="#">Remover</a></li>
+      <li><a href="/horario/editar/hora/{{$hr -> id}}">Editar</a></li>
+      <li><a href="/horario/remover/hora/{{$hr -> id}}">Remover</a></li>
       
     </ul>
   </div>
@@ -48,7 +48,6 @@ Horario
         @endforeach
 
 </table>
-    
 <table class="TableColumns">
         <tr>
         <th><div class="poscentralized bordered">Segunda</div></th>
@@ -72,7 +71,7 @@ Horario
                 <h5>{{$h ->Titulo}}</h5>
                 <h5>{{$h ->Professor}}</h5>
                 <h6>{{$h ->Sala}}</h6>
-                <h6>{{$h ->dia}}</h6>
+                  
               </div>
 
             </div>
@@ -98,7 +97,7 @@ Horario
     <i class="glyphicon glyphicon-option-vertical dropdown-toggle pull-right" data-toggle="dropdown">
     </i>
     <ul class="dropdown-menu">
-      <li><a href="#">Editar</a></li>
+      <li><a href="/horario/editar/{{$h->IdHorario}}">Editar</a></li>
       <li><a href="/horario/remover/{{ $h->IdHorario }}">Remover</a></li>
       
     </ul>
@@ -107,7 +106,6 @@ Horario
                 <h5>{{$h ->Titulo}}</h5>
                 <h5>{{$h ->Professor}}</h5>
                 <h6>{{$h ->Sala}}</h6>
-                <h6>{{$h ->dia}}</h6>
               </div>
 
             </div>
@@ -133,7 +131,7 @@ Horario
     <i class="glyphicon glyphicon-option-vertical dropdown-toggle pull-right" data-toggle="dropdown">
     </i>
     <ul class="dropdown-menu">
-      <li><a href="#">Editar</a></li>
+      <li><a href="/horario/editar/{{$h->IdHorario}}">Editar</a></li>
       <li><a href="/horario/remover/{{ $h->IdHorario }}">Remover</a></li>
       
     </ul>
@@ -142,7 +140,6 @@ Horario
                 <h5>{{$h ->Titulo}}</h5>
                 <h5>{{$h ->Professor}}</h5>
                 <h6>{{$h ->Sala}}</h6>
-                <h6>{{$h ->dia}}</h6>
               </div>
 
             </div>
@@ -168,7 +165,7 @@ Horario
     <i class="glyphicon glyphicon-option-vertical dropdown-toggle pull-right" data-toggle="dropdown">
     </i>
     <ul class="dropdown-menu">
-      <li><a href="#">Editar</a></li>
+      <li><a href="/horario/editar/{{$h->IdHorario}}">Editar</a></li>
       <li><a href="/horario/remover/{{ $h->IdHorario }}">Remover</a></li>
       
     </ul>
@@ -177,7 +174,6 @@ Horario
                 <h5>{{$h ->Titulo}}</h5>
                 <h5>{{$h ->Professor}}</h5>
                 <h6>{{$h ->Sala}}</h6>
-                <h6>{{$h ->dia}}</h6>
               </div>
 
             </div>
@@ -204,7 +200,7 @@ Horario
     <i class="glyphicon glyphicon-option-vertical dropdown-toggle pull-right" data-toggle="dropdown">
     </i>
     <ul class="dropdown-menu">
-      <li><a href="#">Editar</a></li>
+      <li><a href="/horario/editar/{{$h->IdHorario}}">Editar</a></li>
       <li><a href="/horario/remover/{{ $h->IdHorario }}">Remover</a></li>
       
     </ul>
@@ -213,7 +209,6 @@ Horario
                 <h5>{{$h ->Titulo}}</h5>
                 <h5>{{$h ->Professor}}</h5>
                 <h6>{{$h ->Sala}}</h6>
-                <h6>{{$h ->dia}}</h6>
               </div>
 
             </div>
@@ -240,7 +235,7 @@ Horario
     <i class="glyphicon glyphicon-option-vertical dropdown-toggle pull-right" data-toggle="dropdown">
     </i>
     <ul class="dropdown-menu">
-      <li><a href="#">Editar</a></li>
+      <li><a href="/horario/editar/{{$h->IdHorario}}">Editar</a></li>
       <li><a href="/horario/remover/{{ $h->IdHorario }}">Remover</a></li>
       
     </ul>
@@ -249,7 +244,6 @@ Horario
                 <h5>{{$h ->Titulo}}</h5>
                 <h5>{{$h ->Professor}}</h5>
                 <h6>{{$h ->Sala}}</h6>
-                <h6>{{$h ->dia}}</h6>
               </div>
 
             </div>
@@ -275,7 +269,7 @@ Horario
     <i class="glyphicon glyphicon-option-vertical dropdown-toggle pull-right" data-toggle="dropdown">
     </i>
     <ul class="dropdown-menu">
-      <li><a href="#">Editar</a></li>
+      <li><a href="/horario/editar/{{$h->IdHorario}}">Editar</a></li>
       <li><a href="/horario/remover/{{ $h->IdHorario }}">Remover</a></li>
       
     </ul>
@@ -284,7 +278,6 @@ Horario
                 <h5>{{$h ->Titulo}}</h5>
                 <h5>{{$h ->Professor}}</h5>
                 <h6>{{$h ->Sala}}</h6>
-                <h6>{{$h ->dia}}</h6>
               </div>
 
             </div>

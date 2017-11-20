@@ -12,6 +12,7 @@ class Horas extends Model
 
     protected $fillable = array ('id, horainicio,horafim');
     protected $primaryKey = 'id';
+    
 
     //protected $guarded = ['id'];
 }
