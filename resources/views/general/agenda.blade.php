@@ -5,8 +5,47 @@
 @section('content')
 
 
-    <a href="/agenda/novo" class="ButtonNew poscentralized"><div ><i class="glyphicon glyphicon-plus"></i></div></a>
+    <a href="/agenda/novo" class="ButtonNew poscentralized"><div class="container">
+	<div class="row">
+              <button href="#"  class="btn btn-xlarge" ><i class="fa fa-plus fa-5x" ></i></button>
+             
+    </div>
+</div></a>
         
+    <style>
+
+/* Blue Flat Button
+==================================================*/
+.btn-xlarge{
+  position: relative;
+  vertical-align: center;
+  margin: 30px;
+  /*width: 100%;*/
+  height: 100x;
+  padding: 48px 48px;
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  background: #c62828;
+  border: 0;
+  border-bottom: 3px solid #7f0000;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -3px#7f0000;
+  box-shadow: inset 0 -3px #7f0000;
+}
+.btn-xlarge:active {
+  top: 2px;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.btn-xlarge:hover {
+  background: #ff5f52;
+}
+</style>
+
+
     <div class="poscentralized">
         <div class="forma"style="width:600px;">
 

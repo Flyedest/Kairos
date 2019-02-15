@@ -11,8 +11,8 @@
   color: #fff;
 }
 .background{
-  background: url("/img/fundo2.jpg") fixed no-repeat;
-  
+  background: url("/img/fundo2.png") fixed no-repeat;
+    background-size: cover;
 }
 
 body::-webkit-scrollbar-track {
@@ -86,4 +86,15 @@ box-shadow: inset 0px 0px 31px -6px rgba(0,0,0,0.75);
     position: absolute;
     margin-left: 100px;
     font-size: 10pt;
+}
+
+/* Modo Contraste */
+.dark-mode{
+    background-color: #34b9f5 !important;
+}
+.white{
+    color: #eee !important;
+}
+.toggle-black-mode{
+    cursor: pointer;
 }

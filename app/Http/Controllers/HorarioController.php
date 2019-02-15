@@ -43,6 +43,7 @@ class HorarioController extends Controller
         $sala = Request::input('Sala');
         $Dia = Request::input('Dia');
         $idUser = Auth::id();
+        
         DB::insert('insert into horario (Titulo,Professor,Sala,Idusuario,dia) values(?,?,?,?,?)', array($Titulo,$Professor,$sala,$idUser,$Dia));
       
         return redirect()
@@ -73,7 +74,7 @@ class HorarioController extends Controller
     public function atualizarhorario(){
         $id = Request::input('IdHorario');
         $editar = Horarios::find($id);
-        $editar ->Titulo = Request::input('Titulo') ;
+        $editar ->Titulo = Request::input('Titulo');
         $editar ->Professor = Request::input('Professor');
         $editar ->sala = Request::input('Sala');
         $editar ->save();

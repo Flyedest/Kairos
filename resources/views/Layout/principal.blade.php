@@ -18,7 +18,9 @@
     <link rel="stylesheet" type="text/css" href="/css/menu-scroll.css">
     <script type="text/javascript" src="/js/menu-scroll.js"></script>
     <!-- </stylesheet do menu> -->
-
+    
+    <script type="text/javascript" src="/js/script.js"></script>
+    
     <script type="text/javascript">
         function MenuCadastro() {
             location.href = "/horario/novo";
@@ -28,7 +30,7 @@
     <title>Kairos - @yield('title')</title>
 </head>
 
-<body class="@yield('body')">
+<body class="background">
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top menu-scroll"><!-- classe adicionada "menu-scroll" -->
             <div class="container">
@@ -64,18 +66,22 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                        <li><a href="{{ route('login') }}">Login</a></li>
-                        <li><a href="{{ route('register') }}">Registrar-se</a></li>
+                        <li><a class="menuitem" href="{{ route('login') }}">Login</a></li>
+                        <li><a class="menuitem" href="{{ route('register') }}">Registrar-se</a></li>
+                        <!-- Toggle Dark Mode -->
+                        <li id="toggle-black-mode" onclick="blackMode();"><a class="toggle-black-mode">Modo contraste</a></li>
                         @else
                         <li>@yield('Back')</li>
+                        <!-- Toggle Dark Mode -->
+                        <li id="toggle-black-mode" onclick="blackMode();"><a>Modo contraste</a></li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <a class="menuitem" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
                             <ul class="dropdown-menu" role="menu">
                                 <li>
-                                    <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                    <a class="menuitem" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                             Logout
                                         </a>

@@ -1,7 +1,13 @@
 @extends('Layout.principal') @section('content')
 <!-- <div class="poscentralized">
 </div>
- --><div class="container-fluid option-container">
+
+
+ -->
+
+
+
+<div class="container-fluid option-container">
     <a href="/horario">
         <div class="option" id="horario">
             <div class="icone">

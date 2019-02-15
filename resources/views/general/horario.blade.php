@@ -13,9 +13,10 @@ Horario
 <a href="/horario/novo/hora" class="btn btn-default poscentralized"><div  >definir faixa de horas</div></a>
 </div>
 
-<div class="poscentralized">
-<section>
-    <table class="TableColumns">
+
+<table class="table table-stripped ">
+   
+<table class=" alert alert-danger TableColumns">
         <tr>
         <th><div class="poscentralized bordered">Horário</div></th>
         </tr>
@@ -48,7 +49,9 @@ Horario
         @endforeach
 
 </table>
-<table class="TableColumns">
+<!--        Horario-->
+
+<table class=" alert alert-warning TableColumns">
         <tr>
         <th><div class="poscentralized bordered">Segunda</div></th>
         </tr>
@@ -83,7 +86,7 @@ Horario
 @endforeach
 </table>
 
-<table class="TableColumns">
+<table class=" alert alert-warning TableColumns">
         <tr>
         <th><div class="poscentralized bordered">Terça</div></th>
         </tr>
@@ -117,7 +120,7 @@ Horario
 @endforeach
 </table>
 
-<table class="TableColumns">
+<table class=" alert alert-warning TableColumns">
         <tr>
         <th><div class="poscentralized bordered">Quarta</div></th>
         </tr>
@@ -151,7 +154,7 @@ Horario
 @endforeach
 </table>
 
-<table class="TableColumns">
+<table class=" alert alert-warning TableColumns">
         <tr>
         <th><div class="poscentralized bordered">Quinta</div></th>
         </tr>
@@ -186,7 +189,7 @@ Horario
 </table>
 
 
-<table class="TableColumns">
+<table class=" alert alert-warning TableColumns">
         <tr>
         <th><div class="poscentralized bordered">Sexta</div></th>
         </tr>
@@ -221,7 +224,7 @@ Horario
 </table>
 
 
-<table class="TableColumns">
+<table class=" alert alert-success TableColumns">
         <tr>
         <th><div class="poscentralized bordered">Sábado</div></th>
         </tr>
@@ -255,7 +258,7 @@ Horario
 @endforeach
 </table>
 
-<table class="TableColumns">
+<table class=" alert alert-success TableColumns">
         <tr>
         <th><div class="poscentralized bordered">Domingo</div></th>
         </tr>
@@ -289,6 +292,7 @@ Horario
 @endforeach
 </table>
 
-</section>
-</div>
+</table>
+
+
       @stop

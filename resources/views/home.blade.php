@@ -1,7 +1,5 @@
 @extends('layouts.app')
-@section('meta')
-http-equiv="refresh" content="3;URL=/menu"
-@endsection
+
 @section('content')
 <div class="container">
     <div class="row">
@@ -15,8 +13,8 @@ http-equiv="refresh" content="3;URL=/menu"
                             {{ session('status') }}
                         </div>
                     @endif
-                    Bem vindo {{ Auth::user()->name }}, Você será redirecionado logo
-                    
+
+                    You are logged in!
                 </div>
             </div>
         </div>

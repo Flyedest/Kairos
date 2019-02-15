@@ -10,7 +10,7 @@ protected $table = 'horario';
     public $timestamps = false;
     
 
-    protected $fillable = array ('IdHorario', 'Titulo', 'Professor', 'Sala');
+    protected $fillable = array ('IdHorario', 'Idusuario', 'Titulo', 'Professor', 'Sala');
     protected $primaryKey = 'IdHorario';
 
     //protected $guarded = ['IdHorario'];

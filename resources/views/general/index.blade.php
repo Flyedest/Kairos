@@ -12,10 +12,6 @@
 		</div>
 	</a>
 </div>
-<div class="panel panel-default div-panel" align="center">
-  <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sagittis varius sem ac porta. In feugiat elit faucibus erat tristique ornare. Nulla facilisi. Nunc porta orci et justo sollicitudin, ut semper odio laoreet. Suspendisse vel hendrerit arcu, quis congue justo. Cras tincidunt non nulla sed dignissim. In pretium sapien in purus interdum hendrerit. Vestibulum ultricies nibh erat, eget tempus odio commodo vitae. Nam semper fringilla turpis in egestas. Phasellus dapibus ipsum neque.</div>
-</div>
-
 
 @endsection
     @section('Back')
